@@ -7,16 +7,16 @@ class TextBoxPageLocators:
 
 
 class LinksPageLocators:
-    PYTHON = (By.CSS_SELECTOR, 'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(1) > a')
-    JAVASCRIPTS = (By.CSS_SELECTOR, 'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(2) > a')
-    JAVA = (By.CSS_SELECTOR, 'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(3) > a')
-    HTML = (By.CSS_SELECTOR, 'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(4) > a')
-    CPLUSPLUS = (By.CSS_SELECTOR, 'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(5) > a')
-    C = (By.CSS_SELECTOR, 'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(6) > a')
-    JUPYTER = (By.CSS_SELECTOR, 'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(7) > a')
-    CSHARP = (By.CSS_SELECTOR, 'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(8) > a')
-    PHP = (By.CSS_SELECTOR, 'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(9) > a')
-    CSS = (By.CSS_SELECTOR, 'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(10) > a')
+    PYTHON = (By.CSS_SELECTOR, 'body > div.logged-out.env-production.page-responsive > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(1)')
+    JAVASCRIPTS = (By.CSS_SELECTOR, 'body > div.logged-out.env-production.page-responsive > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(2)')
+    JAVA = (By.CSS_SELECTOR, 'body > div.logged-out.env-production.page-responsive > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(3)')
+    HTML = (By.CSS_SELECTOR, 'body > div.logged-out.env-production.page-responsive > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(4)')
+    CPLUSPLUS = (By.CSS_SELECTOR, 'body > div.logged-out.env-production.page-responsive > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(5)')
+    C = (By.CSS_SELECTOR, 'body > div.logged-out.env-production.page-responsive > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(6)')
+    JUPYTER = (By.CSS_SELECTOR, 'body > div.logged-out.env-production.page-responsive > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(7)')
+    CSHARP = (By.CSS_SELECTOR, 'body > div.logged-out.env-production.page-responsive > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(8)')
+    PHP = (By.CSS_SELECTOR, 'body > div.logged-out.env-production.page-responsive > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(9)')
+    CSS = (By.CSS_SELECTOR, 'body > div.logged-out.env-production.page-responsive > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(10)')
 
 class LinksNavigationLocators:
     PAGINATION = (By.XPATH, '/html/body/div[4]/main/div/div[3]/div/div[2]/div')
