@@ -7,12 +7,16 @@ class TextBoxPageLocators:
 
 
 class LinksPageLocators:
-    PYTHON = (By.XPATH,'/html/body/div[4]/main/div/div[2]/div[1]/ul/li[1]/a')
-    JAVASCRIPTS = (By.XPATH,'/html/body/div[4]/main/div/div[2]/div[1]/ul/li[2]/a')
-    JAVA = (By.XPATH,'/html/body/div[4]/main/div/div[2]/div[1]/ul/li[3]/a')
-    HTML = (By.XPATH,'/html/body/div[4]/main/div/div[2]/div[1]/ul/li[4]/a')
-    PHP = (By.XPATH,'/html/body/div[4]/main/div/div[2]/div[1]/ul/li[9]/a')
-    CSS = (By.XPATH,'/html/body/div[4]/main/div/div[2]/div[1]/ul/li[10]/a')
+    PYTHON = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(1) > a')
+    JAVASCRIPTS = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(2) > a')
+    JAVA = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(3) > a')
+    HTML = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(4) > a')
+    CPLUSPLUS = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(5) > a')
+    C = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(6) > a')
+    JUPYTER = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(7) > a')
+    CSHARP = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(8) > a')
+    PHP = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(9) > a')
+    CSS = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-3.float-left.px-md-2 > div.border.rounded-2.p-3.mb-3.d-none.d-md-block > ul > li:nth-child(10) > a')
 
 class LinksNavigationLocators:
     PAGINATION = (By.XPATH,'/html/body/div[4]/main/div/div[3]/div/div[2]/div')

@@ -48,6 +48,14 @@ class LinksPage(BasePage): # элементы для теста функцион
         java_link = self.element_it_clickable(self.locators.JAVA).click()
     def check_new_tab_html(self):  # Выбирает язык програмирования HTML
         java_link = self.element_it_clickable(self.locators.HTML).click()
+    def check_new_tab_cplusplus(self):  # Выбирает язык програмирования C++
+        java_link = self.element_it_clickable(self.locators.CPLUSPLUS).click()
+    def check_new_tab_c(self):  # Выбирает язык програмирования C
+        java_link = self.element_it_clickable(self.locators.C).click()
+    def check_new_tab_jupyter_notebook(self):  # Выбирает язык програмирования Jupyter notebook
+        java_link = self.element_it_clickable(self.locators.JUPYTER).click()
+    def check_new_tab_csharp(self):  # Выбирает язык програмирования C#
+        java_link = self.element_it_clickable(self.locators.CSHARP).click()
     def check_new_tab_php(self):  # Выбирает язык програмирования PHP
         java_link = self.element_it_clickable(self.locators.PHP).click()
     def check_new_tab_css(self):  # Выбирает язык програмирования CSS

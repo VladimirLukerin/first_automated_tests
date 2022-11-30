@@ -24,6 +24,10 @@ class TestLinkLanguages:  # тест функционала переключен
         check_link.check_new_tab_javascript()  # тест выбора языка javascript
         check_link.check_new_tab_java()  # тест выбора языка java
         check_link.check_new_tab_html()  # тест выбора языка html
+        check_link.check_new_tab_cplusplus()  # тест выбора языка C++
+        check_link.check_new_tab_c()  # тест выбора языка C
+        check_link.check_new_tab_jupyter_notebook()  # тест выбора языка Jupyter notebook
+        check_link.check_new_tab_csharp()  # тест выбора языка C#
         check_link.check_new_tab_php()  # тест выбора языка php
         check_link.check_new_tab_css()  # тест выбора языка css
 
