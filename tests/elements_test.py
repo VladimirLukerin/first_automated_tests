@@ -1,7 +1,5 @@
 
-
 from pages.elements_page import TextBoxPage, LinksPage, NavigationPage, SortMenu
-
 
 class TestSearch:  # тест поиска
     class TestTextBox:
@@ -16,19 +14,17 @@ class TestSearch:  # тест поиска
             text_box_page.testboxsearchsix()
 
 
-
-
-
 class TestLinkLanguages:  # тест функционала переключения на определенный язык программирование при поиске
 
     def test_check_link(self, driver):
         check_link = LinksPage(driver, 'https://github.com/search?q=code&ref=simplesearch')
         check_link.open()
-        check_link.check_new_tab()
-
-
-
-
+        check_link.check_new_tab_python()
+        check_link.check_new_tab_javascript()
+        check_link.check_new_tab_java()
+        check_link.check_new_tab_html()
+        check_link.check_new_tab_php()
+        check_link.check_new_tab_css()
 
 class TestNavigation:  # тест пагинации в результатах поиска
 
@@ -36,9 +32,6 @@ class TestNavigation:  # тест пагинации в результатах �
         check_navigation = NavigationPage(driver, 'https://github.com/search?q=code&ref=simplesearch')
         check_navigation.open()
         check_navigation.check_link_navigation()
-
-
-
 
 
 class TestSort:  # тест сортировки
