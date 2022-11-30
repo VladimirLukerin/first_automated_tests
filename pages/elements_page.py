@@ -7,7 +7,32 @@ from locators.elements_page_locators import TextBoxPageLocators, LinksPageLocato
 from pages.base_page import BasePage
 
 
+<<<<<<<<< Temporary merge branch 1
+class TextBoxPage(BasePage):
+    locators = TextBoxPageLocators()
 
+    def fill_fields(self):
+
+        time.sleep(2)
+        self.element_it_visible(self.locators.SEARCH).clear()
+        time.sleep(2)
+        self.element_it_visible(self.locators.SEARCH).send_keys('Js')
+        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER)
+        time.sleep(2)
+        self.element_it_visible(self.locators.SEARCH).clear()
+        time.sleep(2)
+        self.element_it_visible(self.locators.SEARCH).send_keys("Hello")
+        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER)
+        time.sleep(2)
+        self.element_it_visible(self.locators.SEARCH).clear()
+        time.sleep(2)
+        self.element_it_visible(self.locators.SEARCH).send_keys("1234")
+        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER)
+        time.sleep(2)
+
+
+class LinksPage(BasePage):
+=========
 class TextBoxPage(BasePage): # элементы для теста поиска
     locators = TextBoxPageLocators()
 
@@ -40,41 +65,55 @@ class TextBoxPage(BasePage): # элементы для теста поиска
 
 
 class LinksPage(BasePage): # элементы для теста функционала переключения на определенный язык программирование при поиске
+>>>>>>>>> Temporary merge branch 2
+
     locators = LinksPageLocators()
-    def check_new_tab_python(self): #Выбирает язык програмирования PYTHON
+
+    def check_new_tab(self):
         python_link = self.element_it_visible(self.locators.PYTHON).click()
-    def check_new_tab_javascript(self): #Выбирает язык програмирования JAVASCRIPTS
+        time.sleep(3)
         java_skript_link = self.element_it_visible(self.locators.JAVASCRIPTS).click()
-    def check_new_tab_java(self): #Выбирает язык програмирования JAVA
+        time.sleep(3)
         java_link = self.element_it_visible(self.locators.JAVA).click()
-    def check_new_tab_html(self): #Выбирает язык програмирования HTML
+        time.sleep(3)
         java_link = self.element_it_visible(self.locators.HTML).click()
-    def check_new_tab_php(self): #Выбирает язык програмирования PHP
+        time.sleep(3)
         java_link = self.element_it_visible(self.locators.PHP).click()
-    def check_new_tab_css(self): #Выбирает язык програмирования CSS
+        time.sleep(3)
         java_link = self.element_it_visible(self.locators.CSS).click()
 
 
+<<<<<<<<< Temporary merge branch 1
+class NavigationPage(BasePage):
+=========
 class NavigationPage(BasePage): # элементы для теста пагинации в результатах поиска
+>>>>>>>>> Temporary merge branch 2
+
     locators = LinksNavigationLocators()
 
-    def check_link_navigation_next(self):
-        test_pagination = self.element_it_clickable(self.locators.NEXT).send_keys(Keys.END)
-        page_next = self.element_it_clickable(self.locators.NEXT).click()
-    def check_link_navigation_pageone(self):
-        test_pagination = self.element_it_clickable(self.locators.PAGEONE).send_keys(Keys.END)
-        page_next = self.element_it_clickable(self.locators.PAGEONE).click()
-    def check_link_navigation_pagetwo(self):
-        test_pagination = self.element_it_clickable(self.locators.PAGETWO).send_keys(Keys.END)
-        page_next = self.element_it_clickable(self.locators.PAGETWO).click()
-    def check_link_navigation_previos(self):
-        test_pagination = self.element_it_clickable(self.locators.PREVIOS).send_keys(Keys.END)
-        page_next = self.element_it_clickable(self.locators.PREVIOS).click()
+    def check_link_navigation(self):
+
+        test_pagination = self.element_it_visible(self.locators.NEXT).send_keys(Keys.END)
+        time.sleep(1)
+        page_next = self.element_it_visible(self.locators.NEXT).click()
+        time.sleep(3)
+        test_pagination = self.element_it_visible(self.locators.PAGEONE).send_keys(Keys.END)
+        time.sleep(3)
+        page_next = self.element_it_visible(self.locators.PAGEONE).click()
+        time.sleep(3)
+        test_pagination = self.element_it_visible(self.locators.PAGETWO).send_keys(Keys.END)
+        time.sleep(3)
+        page_next = self.element_it_visible(self.locators.PAGETWO).click()
+        time.sleep(3)
+        test_pagination = self.element_it_visible(self.locators.PREVIOS).send_keys(Keys.END)
+        time.sleep(3)
 
 
-
-
+<<<<<<<<< Temporary merge branch 1
+class SortMenu(BasePage):
+=========
 class SortMenu(BasePage): # элементы для теста сортировки
+>>>>>>>>> Temporary merge branch 2
     locators = SortMenuLocators()
 
     def check_sort_menu(self):
