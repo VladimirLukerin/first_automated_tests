@@ -11,3 +11,5 @@ class BasePage:
 
     def element_it_visible(self,locator,timeout=5):#Ждет пока элемент станет видимый
         return wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
+    def element_it_clickable(self,locator,timeout=5):#Ждет пока элемент станет видимый
+        return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))

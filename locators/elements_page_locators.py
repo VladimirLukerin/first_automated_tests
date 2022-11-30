@@ -16,10 +16,10 @@ class LinksPageLocators:
 
 class LinksNavigationLocators:
     PAGINATION = (By.XPATH,'/html/body/div[4]/main/div/div[3]/div/div[2]/div')
-    PREVIOS = (By.XPATH,'/html/body/div[4]/main/div/div[3]/div/div[2]/div/span[1]')
-    PAGEONE = (By.XPATH,'/html/body/div[4]/main/div/div[3]/div/div[2]/div/a[2]')
-    PAGETWO = (By.XPATH,'/html/body/div[4]/main/div/div[3]/div/div[2]/div/a[1]')
-    NEXT = (By.XPATH,'/html/body/div[4]/main/div/div[3]/div/div[2]/div/a[7]')
+    PREVIOS = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-9.float-left.px-2.pt-3.pt-md-0.codesearch-results > div > div.paginate-container.codesearch-pagination-container > div > a.previous_page')
+    PAGEONE = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-9.float-left.px-2.pt-3.pt-md-0.codesearch-results > div > div.paginate-container.codesearch-pagination-container > div > a:nth-child(2)')
+    PAGETWO = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-9.float-left.px-2.pt-3.pt-md-0.codesearch-results > div > div.paginate-container.codesearch-pagination-container > div > a:nth-child(3)')
+    NEXT = (By.CSS_SELECTOR,'body > div.application-main > main > div > div.col-12.col-md-9.float-left.px-2.pt-3.pt-md-0.codesearch-results > div > div.paginate-container.codesearch-pagination-container > div > a.next_page')
 
 class SortMenuLocators:
     SORTOPTIONS = (By.XPATH,'/html/body/div[4]/main/div/div[3]/div/div[1]/details')
