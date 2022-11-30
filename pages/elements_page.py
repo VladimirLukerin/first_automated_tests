@@ -10,24 +10,32 @@ from pages.base_page import BasePage
 class TextBoxPage(BasePage): # элементы для теста поиска
     locators = TextBoxPageLocators()
 
-    def fill_fields(self):
+    def testboxsearchone(self):
+        self.element_it_visible(self.locators.SEARCH).clear() #чистит поле поиска
+        self.element_it_visible(self.locators.SEARCH).send_keys('Js') #вводит в поле поиска "Js"
+        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER) #нажимает клавишу Enter
+    def testboxsearchtwo(self):
+        self.element_it_visible(self.locators.SEARCH).clear() #чистит поле поиска
+        self.element_it_visible(self.locators.SEARCH).send_keys("Hello") #вводит в поле поиска "Hello"
+        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER) #нажимает клавишу Enter
+    def testboxsearchthree(self):
+        self.element_it_visible(self.locators.SEARCH).clear() #чистит поле поиска
+        self.element_it_visible(self.locators.SEARCH).send_keys("1234") #вводит в поле поиска "1234"
+        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER) #нажимает клавишу Enter
+    def testboxsearchfour(self):
+        self.element_it_visible(self.locators.SEARCH).clear() #чистит поле поиска
+        self.element_it_visible(self.locators.SEARCH).send_keys(".") #вводит в поле поиска "."
+        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER) #нажимает клавишу Enter
 
-        time.sleep(2)
-        self.element_it_visible(self.locators.SEARCH).clear()
-        time.sleep(2)
-        self.element_it_visible(self.locators.SEARCH).send_keys('Js')
-        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER)
-        time.sleep(2)
-        self.element_it_visible(self.locators.SEARCH).clear()
-        time.sleep(2)
-        self.element_it_visible(self.locators.SEARCH).send_keys("Hello")
-        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER)
-        time.sleep(2)
-        self.element_it_visible(self.locators.SEARCH).clear()
-        time.sleep(2)
-        self.element_it_visible(self.locators.SEARCH).send_keys("1234")
-        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER)
-        time.sleep(2)
+    def testboxsearchfive(self):
+            self.element_it_visible(self.locators.SEARCH).clear()  # чистит поле поиска
+            self.element_it_visible(self.locators.SEARCH).send_keys("рецепт пирога")  # вводит в поле поиска "рецепт пирога"
+            self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER)  # нажимает клавишу Enter
+
+    def testboxsearchsix(self):
+            self.element_it_visible(self.locators.SEARCH).clear()  # чистит поле поиска
+            self.element_it_visible(self.locators.SEARCH).send_keys("-1234")  # вводит в поле поиска "-1234"
+            self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER)  # нажимает клавишу Enter
 
 
 class LinksPage(BasePage): # элементы для теста функционала переключения на определенный язык программирование при поиске

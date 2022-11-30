@@ -1,4 +1,4 @@
-import time
+
 
 from pages.elements_page import TextBoxPage, LinksPage, NavigationPage, SortMenu
 
@@ -8,10 +8,15 @@ class TestSearch:  # тест поиска
         def test_text_box(self, driver):
             text_box_page = TextBoxPage(driver, 'https://github.com/search?q=code&ref=simplesearch')
             text_box_page.open()
-            text_box_page.fill_fields()
+            text_box_page.testboxsearchone()
+            text_box_page.testboxsearchtwo()
+            text_box_page.testboxsearchthree()
+            text_box_page.testboxsearchfour()
+            text_box_page.testboxsearchfive()
+            text_box_page.testboxsearchsix()
 
 
-time.sleep(5)
+
 
 
 class TestLinkLanguages:  # тест функционала переключения на определенный язык программирование при поиске
@@ -22,7 +27,7 @@ class TestLinkLanguages:  # тест функционала переключен
         check_link.check_new_tab()
 
 
-time.sleep(5)
+
 
 
 class TestNavigation:  # тест пагинации в результатах поиска
@@ -33,7 +38,7 @@ class TestNavigation:  # тест пагинации в результатах �
         check_navigation.check_link_navigation()
 
 
-time.sleep(5)
+
 
 
 class TestSort:  # тест сортировки
