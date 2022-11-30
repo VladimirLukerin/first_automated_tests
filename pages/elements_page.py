@@ -1,4 +1,3 @@
-import time
 
 from selenium.webdriver import Keys
 
@@ -7,32 +6,6 @@ from locators.elements_page_locators import TextBoxPageLocators, LinksPageLocato
 from pages.base_page import BasePage
 
 
-<<<<<<<<< Temporary merge branch 1
-class TextBoxPage(BasePage):
-    locators = TextBoxPageLocators()
-
-    def fill_fields(self):
-
-        time.sleep(2)
-        self.element_it_visible(self.locators.SEARCH).clear()
-        time.sleep(2)
-        self.element_it_visible(self.locators.SEARCH).send_keys('Js')
-        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER)
-        time.sleep(2)
-        self.element_it_visible(self.locators.SEARCH).clear()
-        time.sleep(2)
-        self.element_it_visible(self.locators.SEARCH).send_keys("Hello")
-        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER)
-        time.sleep(2)
-        self.element_it_visible(self.locators.SEARCH).clear()
-        time.sleep(2)
-        self.element_it_visible(self.locators.SEARCH).send_keys("1234")
-        self.element_it_visible(self.locators.SEARCH).send_keys(Keys.ENTER)
-        time.sleep(2)
-
-
-class LinksPage(BasePage):
-=========
 class TextBoxPage(BasePage): # элементы для теста поиска
     locators = TextBoxPageLocators()
 
@@ -65,82 +38,63 @@ class TextBoxPage(BasePage): # элементы для теста поиска
 
 
 class LinksPage(BasePage): # элементы для теста функционала переключения на определенный язык программирование при поиске
->>>>>>>>> Temporary merge branch 2
-
     locators = LinksPageLocators()
 
-    def check_new_tab(self):
-        python_link = self.element_it_visible(self.locators.PYTHON).click()
-        time.sleep(3)
-        java_skript_link = self.element_it_visible(self.locators.JAVASCRIPTS).click()
-        time.sleep(3)
-        java_link = self.element_it_visible(self.locators.JAVA).click()
-        time.sleep(3)
-        java_link = self.element_it_visible(self.locators.HTML).click()
-        time.sleep(3)
-        java_link = self.element_it_visible(self.locators.PHP).click()
-        time.sleep(3)
-        java_link = self.element_it_visible(self.locators.CSS).click()
+    def check_new_tab_python(self):  # Выбирает язык программирования PYTHON
+        python_link = self.element_it_clickable(self.locators.PYTHON).click()
+    def check_new_tab_javascript(self):  # Выбирает язык программирования javascript
+        java_skript_link = self.element_it_clickable(self.locators.JAVASCRIPTS).click()
+    def check_new_tab_java(self):  # Выбирает язык програмирования JAVA
+        java_link = self.element_it_clickable(self.locators.JAVA).click()
+    def check_new_tab_html(self):  # Выбирает язык програмирования HTML
+        java_link = self.element_it_clickable(self.locators.HTML).click()
+    def check_new_tab_php(self):  # Выбирает язык програмирования PHP
+        java_link = self.element_it_clickable(self.locators.PHP).click()
+    def check_new_tab_css(self):  # Выбирает язык програмирования CSS
+        java_link = self.element_it_clickable(self.locators.CSS).click()
 
 
-<<<<<<<<< Temporary merge branch 1
-class NavigationPage(BasePage):
-=========
-class NavigationPage(BasePage): # элементы для теста пагинации в результатах поиска
->>>>>>>>> Temporary merge branch 2
+class NavigationPage(BasePage):  # элементы для теста пагинации в результатах поиска
+
 
     locators = LinksNavigationLocators()
 
-    def check_link_navigation(self):
-
-        test_pagination = self.element_it_visible(self.locators.NEXT).send_keys(Keys.END)
-        time.sleep(1)
-        page_next = self.element_it_visible(self.locators.NEXT).click()
-        time.sleep(3)
-        test_pagination = self.element_it_visible(self.locators.PAGEONE).send_keys(Keys.END)
-        time.sleep(3)
-        page_next = self.element_it_visible(self.locators.PAGEONE).click()
-        time.sleep(3)
-        test_pagination = self.element_it_visible(self.locators.PAGETWO).send_keys(Keys.END)
-        time.sleep(3)
-        page_next = self.element_it_visible(self.locators.PAGETWO).click()
-        time.sleep(3)
-        test_pagination = self.element_it_visible(self.locators.PREVIOS).send_keys(Keys.END)
-        time.sleep(3)
+    def check_link_navigation_next(self):
+        test_pagination = self.element_it_clickable(self.locators.NEXT).send_keys(Keys.END)    # проматывает страницу
+        page_next = self.element_it_clickable(self.locators.NEXT).click()   # нажимает в пагинации кнопку NEXT
+    def check_link_navigation_pageone(self):
+        test_pagination = self.element_it_clickable(self.locators.PAGEONE).send_keys(Keys.END)  # проматывает страницу
+        page_next = self.element_it_clickable(self.locators.PAGEONE).click()   # нажимает в пагинации кнопку PAGEONE
+    def check_link_navigation_pagetwo(self):
+        test_pagination = self.element_it_clickable(self.locators.PAGETWO).send_keys(Keys.END)  # проматывает страницу
+        page_next = self.element_it_clickable(self.locators.PAGETWO).click()   # нажимает в пагинации кнопку PAGETWO
+    def check_link_navigation_previos(self):
+        test_pagination = self.element_it_clickable(self.locators.PREVIOS).send_keys(Keys.END)  # проматывает страницу
+        page_next = self.element_it_clickable(self.locators.PREVIOS).click()   # нажимает в пагинации кнопку PREVIOS
 
 
-<<<<<<<<< Temporary merge branch 1
-class SortMenu(BasePage):
-=========
+
 class SortMenu(BasePage): # элементы для теста сортировки
->>>>>>>>> Temporary merge branch 2
     locators = SortMenuLocators()
 
-    def check_sort_menu(self):
-        sort_match = self.element_it_visible(self.locators.SORTOPTIONS).click()
-        time.sleep(1)
-        sort_beatmatch = self.element_it_visible(self.locators.BESTMATCH).click()
-        time.sleep(1)
-        sort_match = self.element_it_visible(self.locators.SORTOPTIONS).click()
-        time.sleep(1)
-        sort_moststart = self.element_it_visible(self.locators.MOSTSTART).click()
-        time.sleep(1)
-        sort_sortoptions = self.element_it_visible(self.locators.SORTOPTIONS).click()
-        time.sleep(1)
-        sort_feweststart = self.element_it_visible(self.locators.FEWESTSTART).click()
-        time.sleep(1)
-        sort_match = self.element_it_visible(self.locators.SORTOPTIONS).click()
-        time.sleep(1)
-        sort_mostforks = self.element_it_visible(self.locators.MOSTFORKS).click()
-        time.sleep(1)
-        sort_match = self.element_it_visible(self.locators.SORTOPTIONS).click()
-        time.sleep(1)
-        sort_fewestforks = self.element_it_visible(self.locators.FEWESTFORKS).click()
-        time.sleep(1)
-        sort_match = self.element_it_visible(self.locators.SORTOPTIONS).click()
-        time.sleep(1)
-        sort_recently = self.element_it_visible(self.locators.RECENTLY).click()
-        time.sleep(1)
-        sort_match = self.element_it_visible(self.locators.SORTOPTIONS).click()
-        time.sleep(1)
-        sort_leastrecently = self.element_it_visible(self.locators.LEASTRECENTLY).click()
+    def check_sort_menu_bestmatch(self):
+        sort_match = self.element_it_visible(self.locators.SORTOPTIONS).click()  # нажимает кнопку селектора сортировки
+        sort_beatmatch = self.element_it_visible(self.locators.BESTMATCH).click()  # выбирает в селекторе BESTMATCH
+    def check_sort_menu_moststart(self):
+        sort_match = self.element_it_visible(self.locators.SORTOPTIONS).click()  # нажимает кнопку селектора сортировки
+        sort_moststart = self.element_it_visible(self.locators.MOSTSTART).click()  # выбирает в селекторе MOSTSTART
+    def check_sort_menu_feweststart(self):
+        sort_sortoptions = self.element_it_visible(self.locators.SORTOPTIONS).click()  # нажимает кнопку селектора сортировки
+        sort_feweststart = self.element_it_visible(self.locators.FEWESTSTART).click()  # выбирает в селекторе FEWESTSTART
+    def check_sort_menu_mostforks(self):
+        sort_match = self.element_it_visible(self.locators.SORTOPTIONS).click()  # нажимает кнопку селектора сортировки
+        sort_mostforks = self.element_it_visible(self.locators.MOSTFORKS).click()  # выбирает в селекторе MOSTFORKS
+    def check_sort_menu_fewestforks(self):
+        sort_match = self.element_it_visible(self.locators.SORTOPTIONS).click()  # нажимает кнопку селектора сортировки
+        sort_fewestforks = self.element_it_visible(self.locators.FEWESTFORKS).click()  # выбирает в селекторе FEWESTFORKS
+    def check_sort_menu_recently(self):
+        sort_match = self.element_it_visible(self.locators.SORTOPTIONS).click()  # нажимает кнопку селектора сортировки
+        sort_recently = self.element_it_visible(self.locators.RECENTLY).click()  # выбирает в селекторе RECENTLY
+    def check_sort_menu_leastrecently(self):
+        sort_match = self.element_it_visible(self.locators.SORTOPTIONS).click()  # нажимает кнопку селектора сортировки
+        sort_leastrecently = self.element_it_visible(self.locators.LEASTRECENTLY).click()  # выбирает в селекторе
